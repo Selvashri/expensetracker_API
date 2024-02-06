@@ -11,9 +11,10 @@ connectToDb(function(error) {
         console.log('Could not establish connection...')
         console.log(error)
     } else {
+        const port = process.env.PORT || 3000
         app.listen(3000)
         db = getDb()
-        console.log('Listening on port 3000...')
+        console.log(`Listening on port 3000 ${port}...`)
     }
 })
 
